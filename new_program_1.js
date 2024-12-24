@@ -100,10 +100,18 @@ var quotes = [ "Life isn’t about getting and having, it’s about giving and b
  "Nothing is impossible, the word itself says, “I’m possible!” - –Audrey Hepburn",
  "The only way to do great work is to love what you do. - Steve Jobs",
  "If you can dream it, you can achieve it. - Zig Ziglar"];
+ 
+ var personSaying = ["Fred", "Bill", "John", "James", "Shaun", "Samuel", "Neil", "Sandra", "Saffron"];
+ 
+ 
 
 function randomQuoteId(){
-	return Math.floor(Math.random()*quotes.length)
+	return Math.floor(Math.random()*(quotes.length-1))
 };
 
-console.log(quotes[randomQuoteId()]);
+function randomPersonId(){
+	return Math.floor(Math.random()*(personSaying.length-1))
+};
+
+console.log(personSaying[randomPersonId()] + " says " + quotes[randomQuoteId()]);
 
